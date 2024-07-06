@@ -1,0 +1,68 @@
+main {
+  margin: 1rem;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 900;
+  text-align: center;
+  margin: 2.5rem 0;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 900;
+  margin: 1rem 0;
+}
+
+button {
+  font-size: 16px;
+  font-weight: 900;
+  color: #ffffff;
+  background-color: #000000;
+  display: block;
+  margin: 1rem auto;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s, color 0.3s;
+}
+
+button:hover {
+  color: #f0f0f0;
+  background-color: #444444;
+}
+
+button:active {
+  color: #ffffff;
+  background-color: #888888;
+  transform: scale(0.95);
+  transition: transform 0.1s;
+}
+
+
+textarea {
+  width: 90%;
+  height: 75vh;
+  line-height: 2;
+  font-size: 16px;
+  font-weight: 900;
+  resize: none;
+}
+
+.block {
+  width: 100%;
+  display: flex;
+}
+
+.block section {
+  text-align: center;
+  align-self: center;
+}
+
+.input, .result {
+  width: 40%;
+}
+
+.button {
+  width: 20%;
+}

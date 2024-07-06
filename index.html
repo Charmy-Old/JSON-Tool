@@ -5,23 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JSON Tool</title>
   <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <h1>JSON Tool</h1>
-  <section>
-    <h2>Input JSON</h2>
-    <textarea id="inputBlock"></textarea>
-  </section>
-  <section>
-    <div>
-      <button id="findSameValues">Find Same Values</button>
-      <button id="sortKeys">Sort Keys</button>
-    </div>
-  </section>
-  <section>
-    <h2>Result</h2>
-    <textarea id="resultBlock"></textarea>
-  </section>
+  <main>
+    <h1>JSON Tool</h1>
+    <section class="block">
+      <section class="input">
+        <h2>Input JSON</h2>
+        <textarea id="inputBlock"></textarea>
+      </section>
+      <section class="button">
+        <div>
+          <button id="findSameValues">Find Same Values</button>
+          <button id="sortKeys">Sort Keys</button>
+        </div>
+      </section>
+      <section class="result">
+        <h2>Result</h2>
+        <textarea id="resultBlock"></textarea>
+      </section>
+    </section>
+  </main>
   
   <script src="./javascript/all.js"></script>
   <script src="./javascript/sort-keys.js"></script>
