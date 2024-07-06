@@ -1,5 +1,3 @@
-const importData = '../data/data.json';
-
 function findSameValues(jsonData) {
   const firstValue = {};
   for (let key in jsonData) {
@@ -14,18 +12,11 @@ function findSameValues(jsonData) {
     }
   }
 
+  let resultText = '';
   Object.keys(firstValue).forEach(value => {
     if (firstValue[value].length > 1) {
-      console.log(`Value '${value}' appears in '${firstValue[value].join("' and '")}'.`);
+      resultText += `Value '${value}' appears in '${firstValue[value].join("' and '")}'.\n`;
     }
   });
+  document.getElementById('resultBlock').value = resultText || 'No duplicate values found.';
 }
-
-fetch(importData)
-  .then(response => response.json())
-  .then(data => {
-    findSameValues(data);
-  })
-  .catch(error => {
-    console.error('Error fetching the JSON data:', error);
-  });
