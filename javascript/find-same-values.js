@@ -4,12 +4,10 @@ function findSameValues(jsonData) {
   const firstValue = {};
   for (let key in jsonData) {
     let value = jsonData[key];
-    console.log(value);
     if (!(value in firstValue)) {
       firstValue[value] = [key];
     } else {
       const keys = firstValue[value];
-      console.log(keys);
       if (!keys.includes(key)) {
         keys.push(key);
       }
@@ -18,7 +16,7 @@ function findSameValues(jsonData) {
 
   Object.keys(firstValue).forEach(value => {
     if (firstValue[value].length > 1) {
-      // console.log(`Value '${value}' appears in '${firstValue[value].join("' and '")}'.`);
+      console.log(`Value '${value}' appears in '${firstValue[value].join("' and '")}'.`);
     }
   });
 }
