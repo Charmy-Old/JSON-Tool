@@ -9,3 +9,8 @@ document.getElementById('sortKeys').addEventListener('click', () => {
   const jsonData = JSON.parse(inputBlock);
   sortKeys(jsonData);
 });
+
+document.getElementById('organize').addEventListener('click', () => {
+  const inputBlock = document.getElementById('inputBlock').value;
+  organize(inputBlock);
+});
