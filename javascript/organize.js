@@ -14,5 +14,9 @@ function organize(inputData) {
   }
 
   const resultText = JSON.stringify(expectedData, null, 2);
-  document.getElementById('resultBlock').value = resultText;
+  if (resultText === '{}') {
+    document.getElementById('resultBlock').value = 'Cannot organize this data';
+  } else {
+    document.getElementById('resultBlock').value = resultText;
+  }
 }
