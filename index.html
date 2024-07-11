@@ -10,6 +10,13 @@
 <body>
   <main>
     <h1>JSON Tool</h1>
+    <section class="indent">
+      <div>
+        <input id="indentSpaces" type="number" min="1" max="10" value="2">
+        <button id="indent">Indent</button>
+      </div>
+    </section>
+
     <section class="block">
       <section class="input">
         <h2>Input JSON</h2>
@@ -17,11 +24,9 @@
       </section>
       <section class="button">
         <div>
-          <button id="findSameValues">Find Same Values</button>
-          <button id="sortKeys">Sort Keys</button>
-          <button id="organize">Organize</button>
-          <input id="indentSpaces" type="number" placeholder="Indent spaces" min="1" max="10" value="2">
-          <button id="indent">Indent</button>
+            <button id="findSameValues">Find Same Values</button>
+            <button id="sortKeys">Sort Keys</button>
+            <button id="organize">Organize</button>
         </div>
       </section>
       <section class="result">

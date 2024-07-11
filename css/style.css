@@ -77,6 +77,39 @@ textarea {
   width: 20%;
 }
 
+.indent {
+  width: fit-content;
+  margin: auto;
+}
+
+.indent div {
+  display: flex;
+  gap: 2rem;
+}
+
+.indent input {
+  font-size: 14px;
+  font-weight: 900;
+  display: block;
+  margin: auto;
+}
+
+.indent button {
+  width: auto;
+  font-size: 14px;
+  font-weight: 900;
+  color: #ffffff;
+  background-color: #000000;
+  display: block;
+  margin: auto;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s, color 0.3s;
+}
+
+
 @media screen and (max-width: 991px) {
   textarea {
     width: 100%;
