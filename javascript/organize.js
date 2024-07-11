@@ -1,6 +1,6 @@
 function organize(inputData) {
   let expectedData;
-
+  
   try {
     expectedData = JSON.parse(inputData);
   } catch (e) {
