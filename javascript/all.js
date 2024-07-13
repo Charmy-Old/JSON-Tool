@@ -18,3 +18,14 @@ document.getElementById('indent').addEventListener('click', () => {
   const spaces = parseInt(document.getElementById('indentSpaces').value, 10);
   Indent(inputBlock, spaces);
 });
+
+
+document.getElementById('copyResult').addEventListener('click', async () => {
+  const resultBlock = document.getElementById('resultBlock').value;
+  try {
+    await navigator.clipboard.writeText(resultBlock);
+    alert('Copied successfully');
+  } catch (err) {
+    alert('Copy failed');
+  }
+});
