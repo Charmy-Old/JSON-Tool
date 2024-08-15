@@ -19,7 +19,6 @@ document.getElementById('indent').addEventListener('click', () => {
   Indent(inputBlock, spaces);
 });
 
-
 document.getElementById('copyResult').addEventListener('click', async () => {
   const resultBlock = document.getElementById('resultBlock').value;
   try {
