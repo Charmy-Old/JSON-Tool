@@ -1,22 +1,47 @@
+function isValidJSON(enterContent) {
+  try {
+    JSON.parse(enterContent);
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
 document.getElementById('findSameValues').addEventListener('click', () => {
   const inputBlock = document.getElementById('inputBlock').value;
-  findSameValues(inputBlock);
+  if (isValidJSON(inputBlock)) {
+    findSameValues(inputBlock);
+  } else {
+    document.getElementById('resultBlock').value = 'Not a valid JSON format';
+  }
 });
 
 document.getElementById('sortKeys').addEventListener('click', () => {
   const inputBlock = document.getElementById('inputBlock').value;
-  sortKeys(inputBlock);
+  if (isValidJSON(inputBlock)) {
+    sortKeys(inputBlock);
+  } else {
+    document.getElementById('resultBlock').value = 'Not a valid JSON format';
+  }
 });
 
 document.getElementById('organize').addEventListener('click', () => {
   const inputBlock = document.getElementById('inputBlock').value;
-  organize(inputBlock);
+  if (isValidJSON(inputBlock)) {
+    organize(inputBlock);
+  } else {
+    document.getElementById('resultBlock').value = 'Not a valid JSON format';
+  }
 });
 
 document.getElementById('indent').addEventListener('click', () => {
   const inputBlock = document.getElementById('inputBlock').value;
   const spaces = parseInt(document.getElementById('indentSpaces').value, 10);
-  Indent(inputBlock, spaces);
+  if (isValidJSON(inputBlock)) {
+    Indent(inputBlock, spaces);
+  } else {
+    document.getElementById('resultBlock').value = 'Not a valid JSON format';
+  }
 });
 
 document.getElementById('copyResult').addEventListener('click', async () => {
